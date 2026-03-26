@@ -3,195 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Maid4U</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Maid4U – Professional Laundry Service</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Tailwind Config for custom breakpoints -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0d6efd',
+              secondary: '#6c757d',
+            },
+          },
+        },
+      }
+    </script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900 antialiased">
 
-    
-    <div class="container-fluid bg-dark p-1">
-       <div class="conatiner text-center text-white">
-         <p class="h4"> The Number <span class="text-info h2 font-weight-bold font-italic">#1 </span> Exclusive Laundry Delivery Service </p>
-       </div>
-    </div>
-    <!-- Navigation  -->
-
-    <header class="py-1 mb-5">
-        <div class="conatiner">
-            <nav class="navbar navbar-expand-lg navbar-light mr-auto">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="mx-5" src="laundry-1.png" width="200" height="200" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link h4 pt-3" href="pricing.html"><button class="btn btn-info btn-lg p-3 font-weight-bold"> Pricing</button> </a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link h4 pt-3" href="process.html"><button class="btn btn-info btn-lg p-3 font-weight-bold">How it Works</button></a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link h4 pt-3" href="#"> <button class="btn btn-info btn-lg p-3 font-weight-bold" data-toggle="modal" data-target="#exampleModalCenter"> Contact Us</button></a>
-                            </li>
-                        </ul>
-                </div>
-            </nav>
+    <!-- Top Bar -->
+    <header class="bg-gray-800 text-white py-2">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-semibold">
+                The Number <span class="text-indigo-400 text-2xl font-bold italic">#1</span> Exclusive Laundry Delivery Service
+            </p>
         </div>
     </header>
 
-    <!-- Hero Area -->
-    <div class="container my-5 py-3">
-        <div class="row justify-content-content-center">
-            <div class="col-sm-12 col-lg-col-6 col-md-6">
-                <div class="jumbotron bg-white container">
-                    <h1 class="display-3">Laundry Day, Done.</h1>
-                    <p class="lead">Your Clothes, Washed, Ironed &amp; Delivered!
-                    <hr class="my-4">
-                    <p class="lead text-left mr-5">
-                        <a class="btn btn-info btn-lg  font-weight-bold p-3" href="#" role="button" data-toggle="modal" data-target="#exampleModalCenter">Get Started Here</a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 col-md-6">
-                <img class="w-100 d-none d-md-block d-lg-block d-xl-block"src="laundry-done.png" alt="">
-            </div>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm" aria-label="Primary navigation">
+        <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+            <a href="index.html" class="flex items-center">
+                <img src="laundry-1.png" alt="Maid4U Logo" class="w-24 h-24 object-contain mr-2">
+                <span class="sr-only">Maid4U Home</span>
+            </a>
+            <button id="nav-toggle" class="text-gray-500 md:hidden focus:outline-none" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul id="nav-menu" class="hidden w-full md:flex md:items-center md:w-auto space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+                <li>
+                    <a href="pricing.html" class="block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Pricing
+                    </a>
+                </li>
+                <li>
+                    <button data-modal-target="#contact-modal" class="block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Contact Us
+                    </button>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <i class="fas fa-angle-double-down text-center"></i>
-
-    <!-- Content -->
-
-    <div class="container-fluid pt-3 pb-5 bg-info">
-        <div class="container text-center">
-            <div>
-                <p class="h1 p-5"> Easy as 1-2-3</p>
-            </div>
-            <div class="row pb-3">
-                <div class="col-md pt-4">
-                    <img class="w-75 pb-3"src="icon-1.png" alt=""> 
-                    <p class="text-dark h3"><strong>Schedule</strong></p> <br>
-                    <p class="text-white text-justify"> Schedule a pickup for now or later using our website, WhatsApp or with a quick phone call.</p> 
-                </div>
-                <div class="col-md pt-4">
-                    <img class="w-75 pb-3"src="icon-2.png" alt=""> 
-                    <p class="text-dark h3"><strong>Pickup</strong></p> <br>
-                    <p class="text-white text-justify">A professional laundry concierge will swing by to collect and tag your items.</p> 
-                </div>
-                <div class="col-md pt-4">
-                    <img class="w-75 pb-3"src="icon-3.png" alt=""> 
-                    <p class="text-dark h3"><strong>Delivery</strong></p> <br>
-                    <p class="text-white text-justify">Your clothes are returned clean, fresh and ready to wear 24 hours later. </p> 
-                </div>
-            </div>
-            <!-- <div class="pt-5 pb-2">
-                <a href="process.html">
-                <button type="button" class="text-white font-weight-bold btn btn-lg btn-outline-light p-3">Find out more</button>
+    <!-- Hero Section -->
+    <section class="container mx-auto my-8 px-4">
+        <div class="grid gap-8 md:grid-cols-2 items-center">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h1 class="text-4xl font-extrabold mb-4">Laundry Day, Done.</h1>
+                <p class="text-lg mb-4">Your Clothes, Washed, Ironed &amp; Delivered!</p>
+                <a href="pricing.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    Get Started
                 </a>
-            </div> -->
+            </div>
+            <div class="flex justify-center">
+                <img src="hero-image.png" alt="Freshly laundered clothes" class="max-w-full h-auto rounded">
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Modal (hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <div class="bg-white rounded-lg max-w-md w-full p-6">
+            <h2 id="contact-modal-title" class="text-xl font-semibold mb-4">Contact Us</h2>
+            <form>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Name</span>
+                    <input type="text" class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" required>
+                </label>
+                <label class="block mb-2">
+                    <span class="text-gray-700">Email</span>
+                    <input type="email" class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" required>
+                </label>
+                <label class="block mb-4">
+                    <span class="text-gray-700">Message</span>
+                    <textarea class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" rows="4" required></textarea>
+                </label>
+                <div class="flex justify-end space-x-2">
+                    <button type="button" data-modal-close class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 focus:outline-none">Cancel</button>
+                    <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none">Send</button>
+                </div>
+            </form>
         </div>
     </div>
 
-
-
-    <!-- Content -->
-    <div class="container-fluid pt-5 text-center">
-        <div class="container">
-            <p class="h2 p-3"> Clean laundry, at your fingertips!</p>
-            <p class="text-dark h5 pt-2 pb-4 text-muted"> There are lots of websites and apps out there, but not many that will do your laundry for you. 
-            <br> That’s where Maid4U comes in. Now this is what we call the age of convenience.</p> 
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Maid4U. All rights reserved.</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <img class="w-75"src="wash-1.png" alt=""> 
-                </div>
-                <div class="col-md">
-                    <img class="w-75"src="iron-1.png" alt=""> 
-                </div>
-            </div>
-        </div>
-        <a href="pricing.html">
-            <button type="button" class="btn btn-outline-dark font-weight-bold btn btn-lg btn-outline-light p-3 my-5">See Our Prices</button>
-        </a> 
-    </div>
+    </footer>
 
-        <!-- Footer -->
+    <!-- Simple JavaScript for modal & nav toggle -->
+    <script>
+        // Navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('hidden');
+        });
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top border-dark container">
-            <div class="row">
-              <div class="col-12 col-md">
-                <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                <small class="d-block mb-3 text-muted">Maid4U &copy; 2024 <br> All rights reserved.</small>
-              </div>
-              <!-- <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="text-muted" href="#">Cool stuff</a></li>
-                  <li><a class="text-muted" href="#">Random feature</a></li>
-                  <li><a class="text-muted" href="#">Team feature</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="text-muted" href="#">Resource</a></li>
-                  <li><a class="text-muted" href="#">Resource name</a></li>
-                  <li><a class="text-muted" href="#">Another resource</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="text-muted" href="#">Team</a></li>
-                  <li><a class="text-muted" href="#">Locations</a></li>
-                  <li><a class="text-muted" href="#">Privacy</a></li>
-                  <li><a class="text-muted" href="#">Terms</a></li>
-                </ul> -->
-              </div>
-            </div>
-          </footer>
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close btn-warning" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="p-5 text-center">
-                    <p class="h1 display-3 text-center">Online Order</p>
-                    <p class="text-center h5 text-muted pb-4">Convenience just got a whole lot easier.</p>
-                    <p class="text-center">Please leave your address details below and we'll be in contact soon.
-                     </p>
-                    <a href="maid4u/index.html">
-                        <button class="btn btn-info p-3 mt-3">
-                           <span class="text-center text-white">Let us take the load off your hands!</span> 
-                        </button>
-                    </a> 
-                </div>
-                <button type="button" class="close btn-warning mr-3 p-3 " data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><small><u>No. I love doing laundry!</u></small></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        // Modal handling
+        document.querySelectorAll('[data-modal-target]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = document.querySelector(btn.getAttribute('data-modal-target'));
+                modal.classList.remove('hidden');
+            });
+        });
+        document.querySelectorAll('[data-modal-close]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('[role="dialog"]').classList.add('hidden');
+            });
+        });
+        // Close modal on Escape key
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('[role="dialog"]').forEach(modal => modal.classList.add('hidden'));
+            }
+        });
+    </script>
 </body>
 </html>
