@@ -19,6 +19,9 @@
         },
       }
     </script>
+    <style>
+      /* Additional custom styles if needed */
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased">
 
@@ -65,76 +68,48 @@
             <div class="bg-white p-6 rounded-lg shadow">
                 <h1 class="text-4xl font-extrabold mb-4">Laundry Day, Done.</h1>
                 <p class="text-lg mb-4">Your Clothes, Washed, Ironed &amp; Delivered!</p>
-                <a href="pricing.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    Get Started
-                </a>
+                <a href="pricing.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">Get Started</a>
             </div>
             <div class="flex justify-center">
-                <img src="hero-image.png" alt="Freshly laundered clothes" class="max-w-full h-auto rounded">
+                <img src="hero-image.png" alt="Laundry Service" class="w-full max-w-md rounded-lg shadow-lg object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Contact Modal (hidden by default) -->
-    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-        <div class="bg-white rounded-lg max-w-md w-full p-6">
-            <h2 id="contact-modal-title" class="text-xl font-semibold mb-4">Contact Us</h2>
-            <form>
-                <label class="block mb-2">
-                    <span class="text-gray-700">Name</span>
-                    <input type="text" class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" required>
-                </label>
-                <label class="block mb-2">
-                    <span class="text-gray-700">Email</span>
-                    <input type="email" class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" required>
-                </label>
-                <label class="block mb-4">
-                    <span class="text-gray-700">Message</span>
-                    <textarea class="mt-1 block w-full border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" rows="4" required></textarea>
-                </label>
-                <div class="flex justify-end space-x-2">
-                    <button type="button" data-modal-close class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 focus:outline-none">Cancel</button>
-                    <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none">Send</button>
-                </div>
-            </form>
+    <!-- Features Section (example of responsive grid) -->
+    <section class="container mx-auto my-12 px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Us</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white p-5 rounded-lg shadow text-center">
+                <h3 class="font-semibold mb-2">Fast Delivery</h3>
+                <p class="text-sm">Get your laundry back within 24 hours.</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow text-center">
+                <h3 class="font-semibold mb-2">Quality Care</h3>
+                <p class="text-sm">Professional washing and ironing.</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow text-center">
+                <h3 class="font-semibold mb-2">Eco Friendly</h3>
+                <p class="text-sm">We use biodegradable detergents.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-200 py-6 mt-12">
+    <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Maid4U. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Simple JavaScript for modal & nav toggle -->
+    <!-- Mobile navigation toggle script -->
     <script>
-        // Navigation toggle
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
         navToggle.addEventListener('click', () => {
             const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
             navToggle.setAttribute('aria-expanded', !expanded);
             navMenu.classList.toggle('hidden');
-        });
-
-        // Modal handling
-        document.querySelectorAll('[data-modal-target]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const modal = document.querySelector(btn.getAttribute('data-modal-target'));
-                modal.classList.remove('hidden');
-            });
-        });
-        document.querySelectorAll('[data-modal-close]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('[role="dialog"]').classList.add('hidden');
-            });
-        });
-        // Close modal on Escape key
-        window.addEventListener('keydown', e => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('[role="dialog"]').forEach(modal => modal.classList.add('hidden'));
-            }
         });
     </script>
 </body>
