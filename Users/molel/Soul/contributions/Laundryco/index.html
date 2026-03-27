@@ -21,9 +21,6 @@
     </script>
     <!-- Custom responsive stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <style>
-      /* Additional custom styles if needed */
-    </style>
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased">
 
@@ -65,31 +62,44 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto my-8 px-4">
-        <div class="responsive-grid items-center">
-            <!-- Text Content -->
-            <div class="hero-text">
-                <h1 class="text-4xl font-extrabold mb-4">Fast, Reliable Laundry Service</h1>
-                <p class="text-lg mb-6">
-                    We pick up, wash, and deliver your laundry right to your doorstep. Experience convenience like never before.
-                </p>
-                <a href="pricing.html" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-indigo-700 transition">
-                    View Pricing
-                </a>
-            </div>
-            <!-- Image Content -->
-            <div class="hero-image">
-                <img src="laundry-hero.jpg" alt="Laundry Service" class="responsive-img rounded-lg shadow-lg">
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="bg-white p-6 rounded-lg shadow flex-responsive">
+                    <h1 class="text-4xl font-extrabold text-gray-800">
+                        Fresh, Fast, & Reliable Laundry Service
+                    </h1>
+                    <p class="mt-4 text-gray-600">
+                        We pick up, wash, and deliver your laundry right to your doorstep. Experience the convenience of professional care.
+                    </p>
+                    <a href="pricing.html" class="mt-4 inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary/80">
+                        View Pricing
+                    </a>
+                </div>
+                <div class="flex-center">
+                    <img src="laundry-hero.jpg" alt="Laundry Service" class="responsive-img rounded-lg shadow">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (optional placeholder) -->
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
+    <!-- Footer (optional) -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container text-center">
             <p>&copy; 2024 Maid4U. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Navigation toggle script -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
