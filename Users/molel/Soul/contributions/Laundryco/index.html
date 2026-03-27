@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid4U – Professional Laundry Service</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Tailwind Config for custom breakpoints -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0d6efd',
+              secondary: '#6c757d',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom responsive grid using CSS Grid (fallback / additional control) */
+      .responsive-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      @media (min-width: 640px) {
+        .responsive-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1024px) {
+        .responsive-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      /* Simple Flexbox utility for vertical centering on small screens */
+      .flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased">
+
+    <!-- Top Bar -->
+    <header class="bg-gray-800 text-white py-2">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-semibold">
+                The Number <span class="text-indigo-400 text-2xl font-bold italic">#1</span> Exclusive Laundry Delivery Service
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm" aria-label="Primary navigation">
+        <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+            <a href="index.html" class="flex items-center">
+                <img src="laundry-1.png" alt="Maid4U Logo" class="w-24 h-24 object-contain mr-2">
+                <span class="sr-only">Maid4U Home</span>
+            </a>
+            <button id="nav-toggle" class="text-gray-500 md:hidden focus:outline-none" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul id="nav-menu" class="hidden w-full md:flex md:items-center md:w-auto space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+                <li>
+                    <a href="pricing.html" class="block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Pricing
+                    </a>
+                </li>
+                <li>
+                    <button data-modal-target="#contact-modal" class="block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Contact Us
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto my-8 px-4">
+        <div class="grid gap-8 md:grid-cols-2 items-center">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h1 class="text-4xl font-extrabold mb-4">Laundry Day, Done.</h1>
+                <p class="text-lg mb-4">Your clothes deserve the best care. Let us handle the wash, dry, and fold while you focus on what matters most.</p>
+                <a href="pricing.html" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+                    Get Started
+                </a>
+            </div>
+            <div class="flex justify-center">
+                <img src="hero-image.png" alt="Freshly laundered clothes" class="max-w-full h-auto rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section – Demonstrates responsive grid -->
+    <section class="container mx-auto my-12 px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <div class="responsive-grid">
+            <div class="bg-white p-4 rounded shadow flex-center">
+                <img src="service-wash.png" alt="Wash" class="w-16 h-16 mb-2">
+                <h3 class="font-semibold">Wash</h3>
+                <p class="text-sm text-gray-600">Premium washing with eco‑friendly detergents.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow flex-center">
+                <img src="service-dry.png" alt="Dry" class="w-16 h-16 mb-2">
+                <h3 class="font-semibold">Dry</h3>
+                <p class="text-sm text-gray-600">Gentle tumble drying to preserve fabric quality.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow flex-center">
+                <img src="service-fold.png" alt="Fold" class="w-16 h-16 mb-2">
+                <h3 class="font-semibold">Fold</h3>
+                <p class="text-sm text-gray-600">Neat folding for easy storage.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow flex-center">
+                <img src="service-delivery.png" alt="Delivery" class="w-16 h-16 mb-2">
+                <h3 class="font-semibold">Delivery</h3>
+                <p class="text-sm text-gray-600">Door‑to‑door service at your convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Maid4U. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple script for mobile nav toggle -->
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('hidden');
+      });
+    </script>
+</body>
+</html>
