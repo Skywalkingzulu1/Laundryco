@@ -20,29 +20,7 @@
       }
     </script>
     <style>
-      /* Custom responsive grid using CSS Grid (fallback / additional control) */
-      .responsive-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      @media (min-width: 640px) {
-        .responsive-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (min-width: 1024px) {
-        .responsive-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-      /* Simple Flexbox utility for vertical centering on small screens */
-      .flex-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+      /* Additional custom styles if needed */
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased">
@@ -88,62 +66,28 @@
     <section class="container mx-auto my-8 px-4">
         <div class="grid gap-8 md:grid-cols-2 items-center">
             <div class="bg-white p-6 rounded-lg shadow">
-                <h1 class="text-4xl font-extrabold mb-4">Laundry Day, Done.</h1>
-                <p class="text-lg mb-4">Your clothes deserve the best care. Let us handle the wash, dry, and fold while you focus on what matters most.</p>
-                <a href="pricing.html" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-blue-700 transition">
-                    Get Started
-                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Laundry Day, Done.</h1>
+                <p class="text-lg mb-4">Your Clothes, Our Care – Fast, Fresh, and Reliable.</p>
+                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-primary/80 transition">Get Started</a>
             </div>
             <div class="flex justify-center">
-                <img src="hero-image.png" alt="Freshly laundered clothes" class="max-w-full h-auto rounded">
+                <img src="hero-image.png" alt="Laundry Service" class="w-full max-w-sm rounded-lg shadow-lg object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Services Section – Demonstrates responsive grid -->
-    <section class="container mx-auto my-12 px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-        <div class="responsive-grid">
-            <div class="bg-white p-4 rounded shadow flex-center">
-                <img src="service-wash.png" alt="Wash" class="w-16 h-16 mb-2">
-                <h3 class="font-semibold">Wash</h3>
-                <p class="text-sm text-gray-600">Premium washing with eco‑friendly detergents.</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow flex-center">
-                <img src="service-dry.png" alt="Dry" class="w-16 h-16 mb-2">
-                <h3 class="font-semibold">Dry</h3>
-                <p class="text-sm text-gray-600">Gentle tumble drying to preserve fabric quality.</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow flex-center">
-                <img src="service-fold.png" alt="Fold" class="w-16 h-16 mb-2">
-                <h3 class="font-semibold">Fold</h3>
-                <p class="text-sm text-gray-600">Neat folding for easy storage.</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow flex-center">
-                <img src="service-delivery.png" alt="Delivery" class="w-16 h-16 mb-2">
-                <h3 class="font-semibold">Delivery</h3>
-                <p class="text-sm text-gray-600">Door‑to‑door service at your convenience.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Additional content sections would follow the same responsive pattern -->
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-200 py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Maid4U. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Simple script for mobile nav toggle -->
+    <!-- Script for mobile navigation toggle -->
     <script>
       const navToggle = document.getElementById('nav-toggle');
       const navMenu = document.getElementById('nav-menu');
-
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
         navToggle.setAttribute('aria-expanded', !expanded);
         navMenu.classList.toggle('hidden');
       });
     </script>
+
 </body>
 </html>
