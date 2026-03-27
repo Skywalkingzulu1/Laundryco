@@ -19,6 +19,8 @@
         },
       }
     </script>
+    <!-- Custom responsive stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <style>
       /* Additional custom styles if needed */
     </style>
@@ -64,30 +66,30 @@
 
     <!-- Hero Section -->
     <section class="container mx-auto my-8 px-4">
-        <div class="grid gap-8 md:grid-cols-2 items-center">
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Laundry Day, Done.</h1>
-                <p class="text-lg mb-4">Your Clothes, Our Care – Fast, Fresh, and Reliable.</p>
-                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-primary/80 transition">Get Started</a>
+        <div class="responsive-grid items-center">
+            <!-- Text Content -->
+            <div class="hero-text">
+                <h1 class="text-4xl font-extrabold mb-4">Fast, Reliable Laundry Service</h1>
+                <p class="text-lg mb-6">
+                    We pick up, wash, and deliver your laundry right to your doorstep. Experience convenience like never before.
+                </p>
+                <a href="pricing.html" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-indigo-700 transition">
+                    View Pricing
+                </a>
             </div>
-            <div class="flex justify-center">
-                <img src="hero-image.png" alt="Laundry Service" class="w-full max-w-sm rounded-lg shadow-lg object-cover">
+            <!-- Image Content -->
+            <div class="hero-image">
+                <img src="laundry-hero.jpg" alt="Laundry Service" class="responsive-img rounded-lg shadow-lg">
             </div>
         </div>
     </section>
 
-    <!-- Additional content sections would follow the same responsive pattern -->
-
-    <!-- Script for mobile navigation toggle -->
-    <script>
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      navToggle.addEventListener('click', () => {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-        navToggle.setAttribute('aria-expanded', !expanded);
-        navMenu.classList.toggle('hidden');
-      });
-    </script>
+    <!-- Footer (optional placeholder) -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Maid4U. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
