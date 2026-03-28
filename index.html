@@ -6,7 +6,7 @@
     <title>Maid4U – Professional Laundry Service</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Optional: Tailwind Config for custom breakpoints -->
+    <!-- Optional: Tailwind Config for custom colors -->
     <script>
       tailwind.config = {
         theme: {
@@ -64,41 +64,33 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-content">
-            <div class="bg-white p-6 rounded-lg shadow flex-center flex-responsive-gap">
-                <div class="flex-1">
-                    <h1 class="text-4xl font-extrabold mb-4">Fast, Reliable Laundry Service</h1>
-                    <p class="text-lg mb-6">
-                        We pick up, wash, and deliver your laundry within 24 hours. Enjoy fresh clothes without the hassle.
-                    </p>
-                    <a href="pricing.html" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-primary/80 transition">
-                        View Pricing
-                    </a>
-                </div>
-                <div class="flex-1">
-                    <img src="laundry-hero.jpg" alt="Fresh laundry" class="responsive-img rounded">
-                </div>
+            <div class="flex-1">
+                <h1 class="text-4xl font-extrabold mb-4">Fast, Reliable Laundry Service</h1>
+                <p class="mb-6 text-lg">We pick up, wash, and deliver your laundry at your convenience.</p>
+                <button class="px-6 py-3 bg-primary text-white rounded hover:bg-primary/80">Get Started</button>
+            </div>
+            <div class="flex-1">
+                <img src="laundry-hero.jpg" alt="Laundry Service" class="responsive-img rounded shadow">
             </div>
         </div>
     </section>
 
-    <!-- Optional: Additional Content Sections could go here -->
-
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container text-center">
             <p>&copy; 2024 Maid4U. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Mobile Navigation Script -->
+    <!-- Navigation toggle script -->
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
 
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-            const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('hidden');
         });
     </script>
 </body>

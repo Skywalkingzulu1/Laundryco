@@ -132,76 +132,7 @@ html, body {
 }
 @media (min-width: 768px) {
   .hero-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 }
-
-/* Adjust hero layout to flex on tablet+ for tighter control */
-@media (min-width: 768px) {
-  .hero-section .hero-content {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
-  }
-}
-
-/* Ensure images inside hero scale correctly */
-.hero-section img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ------------------------------------------------------------
-   Navigation Helpers
-   ------------------------------------------------------------ */
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .nav-menu {
-    flex-direction: row;
-    width: auto;
-  }
-}
-
-/* Header and Footer responsive spacing */
-header,
-footer {
-  padding: 1rem;
-}
-@media (min-width: 768px) {
-  header,
-  footer {
-    padding: 1.5rem 2rem;
-  }
-}
-
-/* ------------------------------------------------------------
-   Additional Utility Classes
-   ------------------------------------------------------------ */
-
-/* Utility to hide elements on mobile and show on tablet+ */
-.show-on-tablet {
-  display: none;
-}
-@media (min-width: 768px) {
-  .show-on-tablet {
-    display: block;
-  }
-}
-
-/* Utility to hide elements on tablet+ and show on mobile */
-.show-on-mobile {
-  display: block;
-}
-@media (min-width: 768px) {
-  .show-on-mobile {
-    display: none;
-  }
-}
-
-/* End of style.css */
