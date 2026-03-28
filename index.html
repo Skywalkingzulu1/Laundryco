@@ -49,7 +49,7 @@
                           d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
-            <ul id="nav-menu" class="hidden w-full md:flex md:items-center md:w-auto space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+            <ul id="nav-menu" class="nav-menu hidden w-full md:flex md:items-center md:w-auto space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
                 <li>
                     <a href="pricing.html" class="block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         Pricing
@@ -65,32 +65,31 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto my-8 px-4">
-        <div class="grid gap-8 md:grid-cols-2 items-center">
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h1 class="text-4xl font-extrabold mb-4">Laundry Day, Done.</h1>
-                <p class="text-lg mb-4">Your Clot...</p>
-                <!-- Additional hero content can go here -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="bg-white p-6 rounded-lg shadow flex-center">
+                <h1 class="text-4xl font-extrabold mb-4">Fast, Reliable Laundry Service</h1>
+                <p class="text-lg mb-6">We pick up, wash, and deliver your laundry right to your door.</p>
+                <a href="pricing.html" class="inline-block px-6 py-3 bg-primary text-white rounded hover:bg-indigo-700">View Pricing</a>
             </div>
-            <div class="flex justify-center md:justify-end">
-                <img src="hero-image.png" alt="Hero Image" class="w-full max-w-sm rounded-lg shadow-lg">
+            <div class="flex-center">
+                <img src="laundry-hero.jpg" alt="Laundry Service" class="responsive-img rounded-lg shadow">
             </div>
         </div>
     </section>
 
-    <!-- Additional page sections would follow here -->
-
-    <!-- Footer -->
+    <!-- Optional Footer -->
     <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Maid4U. All rights reserved.</p>
+        <div class="container text-center">
+            <p class="text-sm">&copy; 2024 Maid4U. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Optional JavaScript for navigation toggle -->
+    <!-- Navigation Toggle Script -->
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
+
         navToggle.addEventListener('click', () => {
             const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
             navToggle.setAttribute('aria-expanded', !expanded);
