@@ -113,17 +113,16 @@ html, body {
 }
 
 /* ------------------------------------------------------------
-   Utility Classes for Spacing (margin & padding) – mobile first
+   Navigation Helpers
    ------------------------------------------------------------ */
-.mt-0 { margin-top: 0; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-8 { margin-top: 2rem; }
-
-/* Additional utility for bottom margin (optional) */
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-8 { margin-bottom: 2rem; }
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .nav-menu {
+    flex-direction: row;
+    width: auto;
+  }
+}
