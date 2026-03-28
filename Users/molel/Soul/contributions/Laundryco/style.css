@@ -126,3 +126,46 @@ html, body {
     width: auto;
   }
 }
+
+/* ------------------------------------------------------------
+   Additional Mobile‑to‑Tablet Responsive Adjustments
+   ------------------------------------------------------------ */
+
+/* Header text scaling */
+header p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  header p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Navigation button visibility */
+#nav-toggle {
+  display: block;
+}
+@media (min-width: 768px) {
+  #nav-toggle {
+    display: none;
+  }
+}
+
+/* Footer spacing */
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Ensure buttons have consistent touch area on mobile */
+button, .button, a.block {
+  min-height: 44px;
+}
+
+/* End of custom stylesheet */
