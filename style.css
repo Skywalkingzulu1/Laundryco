@@ -76,6 +76,31 @@ html, body {
   align-items: center;
 }
 
+/* Layout container – column on mobile, row on tablet+ */
+.layout-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .layout-flex {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+/* Button group – vertical on mobile, horizontal on tablet+ */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .button-group {
+    flex-direction: row;
+  }
+}
+
 /* ------------------------------------------------------------
    Image Utilities
    ------------------------------------------------------------ */
@@ -112,6 +137,22 @@ html, body {
   }
 }
 
+/* Adjust hero layout to flex on tablet+ for tighter control */
+@media (min-width: 768px) {
+  .hero-section .hero-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+/* Ensure images inside hero scale correctly */
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ------------------------------------------------------------
    Navigation Helpers
    ------------------------------------------------------------ */
@@ -127,38 +168,39 @@ html, body {
   }
 }
 
-/* ------------------------------------------------------------
-   Mobile Navigation Toggle (JS will add .show class)
-   ------------------------------------------------------------ */
-@media (max-width: 767px) {
-  #nav-menu {
-    display: none;
+/* Header and Footer responsive spacing */
+header,
+footer {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  header,
+  footer {
+    padding: 1.5rem 2rem;
   }
-  #nav-menu.show {
+}
+
+/* ------------------------------------------------------------
+   Additional Utility Classes
+   ------------------------------------------------------------ */
+
+/* Utility to hide elements on mobile and show on tablet+ */
+.show-on-tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .show-on-tablet {
     display: block;
   }
 }
 
-/* ------------------------------------------------------------
-   Utility for images used inside content
-   ------------------------------------------------------------ */
-img.responsive-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ------------------------------------------------------------
-   Additional Flexbox utilities for custom sections
-   ------------------------------------------------------------ */
-.flex-responsive-gap {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* Utility to hide elements on tablet+ and show on mobile */
+.show-on-mobile {
+  display: block;
 }
 @media (min-width: 768px) {
-  .flex-responsive-gap {
-    flex-direction: row;
-    align-items: flex-start;
+  .show-on-mobile {
+    display: none;
   }
 }
 
