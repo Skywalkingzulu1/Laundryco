@@ -126,3 +126,40 @@ html, body {
     width: auto;
   }
 }
+
+/* ------------------------------------------------------------
+   Mobile Navigation Toggle (JS will add .show class)
+   ------------------------------------------------------------ */
+@media (max-width: 767px) {
+  #nav-menu {
+    display: none;
+  }
+  #nav-menu.show {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------
+   Utility for images used inside content
+   ------------------------------------------------------------ */
+img.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------
+   Additional Flexbox utilities for custom sections
+   ------------------------------------------------------------ */
+.flex-responsive-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .flex-responsive-gap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* End of style.css */
